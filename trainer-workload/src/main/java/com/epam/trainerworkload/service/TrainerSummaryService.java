@@ -8,5 +8,5 @@ import java.util.List;
 public interface TrainerSummaryService {
     void manageTrainingSession(TrainingSessionDTO dto, String transactionId);
 
-    List<TrainerSummary> getTrainingSessions();
+
 }

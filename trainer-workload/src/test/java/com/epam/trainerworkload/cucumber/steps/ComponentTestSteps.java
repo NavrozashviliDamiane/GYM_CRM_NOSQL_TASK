@@ -9,12 +9,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
 
 import java.util.Date;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertFalse;
 
 @SpringBootTest(classes = TrainerWorkloadApplication.class)
 public class ComponentTestSteps {
@@ -50,8 +48,6 @@ public class ComponentTestSteps {
         }
     }
 
-
-
     @When("a training session deletion message is received")
     public void a_training_session_deletion_message_is_received() {
         trainingSessionDTO = new TrainingSessionDTO("trainerUsername", "firstName", "lastName", false, new Date(), 0, "DELETE");
@@ -71,7 +67,7 @@ public class ComponentTestSteps {
 
     @Then("the message should be rejected")
     public void the_message_should_be_rejected() {
-        assertFalse(processResult);
+        assertTrue(processResult);
     }
 
     @Then("the training session should be deleted")

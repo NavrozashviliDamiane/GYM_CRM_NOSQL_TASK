@@ -1,12 +1,25 @@
-Feature: Microservices Integration
+Feature: Trainer Management
+  Scenario Outline: Trainer creation and retrieval
+    Given the system has no trainer with username "<trainerUsername>"
+    When I create a trainer with first name "<firstName>", last name "<lastName>", username "<trainerUsername>", active status "<isActive>", training date "<trainingDate>", training duration "<trainingDuration>", and action type "<actionType>"
 
-  Scenario: Valid Training Session Message
-    Given a valid training session message in Topic.example
-    When the message is processed by the consumer
-    Then it should be stored in the intermediate queue
-    And it should be processed and stored by the trainer summary service
 
-  Scenario: Invalid Training Session Message
-    Given an invalid training session message in Topic.example
-    When the message is processed by the consumer
-    Then it should be rejected
+
+    Examples:
+      | trainerUsername | firstName | lastName | isActive | trainingDate | trainingDuration | actionType |
+      | trainer1        | John      | Doe      | true     | 2024-06-15   | 60               | ADD        |
+      | trainer2        | Jane      | Smith    | true     | 2024-06-16   | 45               | ADD        |
+
+  Scenario Outline: Delete trainer
+    Given the system has a trainer with username "<trainerUsername>"
+    When I delete the trainer with username "<trainerUsername>"
+    Then the trainer should be deleted successfully
+
+    Examples:
+      | trainerUsername |
+      | trainer1        |
+      | trainer2        |
+
+  Scenario: Create trainer with invalid details
+    When I create a trainer with invalid details
+    Then the trainer creation should fail
