@@ -1,9 +1,10 @@
 package com.epam.trainerworkload.unit.messaging;
 
 
-import com.epam.trainerworkload.unit.dto.TrainingSessionDTO;
+import com.epam.trainerworkload.config.JwtService;
+import com.epam.trainerworkload.dto.TrainingSessionDTO;
+import com.epam.trainerworkload.messaging.IntermediateQueueConsumer;
 import com.epam.trainerworkload.service.TrainerSummaryService;
-import com.epam.trainerworkload.unit.config.JwtService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.jms.Message;
 import jakarta.jms.TextMessage;

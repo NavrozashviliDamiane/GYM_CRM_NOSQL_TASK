@@ -1,6 +1,7 @@
 package com.epam.trainerworkload.unit.exception;
 
 
+import com.epam.trainerworkload.exception.GlobalExceptionHandler;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -2,6 +2,7 @@ package com.epam.trainerworkload.unit.transaction;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import com.epam.trainerworkload.util.transaction.TransactionIdGenerator;
 import org.junit.jupiter.api.Test;
 
 public class TransactionIdGeneratorTest {

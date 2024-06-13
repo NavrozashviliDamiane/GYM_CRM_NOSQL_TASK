@@ -1,1 +1,0 @@
-package com.epam.trainerworkload.config;

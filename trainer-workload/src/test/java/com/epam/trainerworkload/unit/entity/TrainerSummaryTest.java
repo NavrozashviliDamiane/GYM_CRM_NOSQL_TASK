@@ -1,6 +1,7 @@
 package com.epam.trainerworkload.unit.entity;
 
 
+import com.epam.trainerworkload.entity.TrainerSummary;
 import jakarta.validation.*;
 import org.junit.jupiter.api.Test;
 

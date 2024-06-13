@@ -1,8 +1,10 @@
 package com.epam.trainerworkload.unit.impl;
 
-import com.epam.trainerworkload.unit.dto.TrainingSessionDTO;
-import com.epam.trainerworkload.unit.entity.TrainerSummary;
+
+import com.epam.trainerworkload.dto.TrainingSessionDTO;
+import com.epam.trainerworkload.entity.TrainerSummary;
 import com.epam.trainerworkload.repository.TrainerSummaryRepository;
+import com.epam.trainerworkload.service.impl.TrainerSummaryServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

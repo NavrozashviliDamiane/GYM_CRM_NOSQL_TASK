@@ -1,5 +1,6 @@
 package com.epam.trainerworkload.unit.dto;
 
+import com.epam.trainerworkload.dto.TrainingSessionDTO;
 import jakarta.validation.*;
 import org.junit.jupiter.api.Test;
 

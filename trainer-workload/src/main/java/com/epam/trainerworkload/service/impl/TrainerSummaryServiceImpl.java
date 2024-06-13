@@ -1,7 +1,9 @@
 package com.epam.trainerworkload.service.impl;
 
+import com.epam.trainerworkload.config.JwtService;
 import com.epam.trainerworkload.dto.TrainingSessionDTO;
 import com.epam.trainerworkload.entity.TrainerSummary;
+import com.epam.trainerworkload.exception.InvalidJwtTokenException;
 import com.epam.trainerworkload.repository.TrainerSummaryRepository;
 import com.epam.trainerworkload.service.TrainerSummaryService;
 import lombok.extern.slf4j.Slf4j;
@@ -16,13 +18,18 @@ public class TrainerSummaryServiceImpl implements TrainerSummaryService {
 
     private final TrainerSummaryRepository repository;
 
+    private final JwtService jwtService;
+
     @Autowired
-    public TrainerSummaryServiceImpl(TrainerSummaryRepository repository) {
+    public TrainerSummaryServiceImpl(TrainerSummaryRepository repository, JwtService jwtService) {
         this.repository = repository;
+        this.jwtService = jwtService;
     }
 
     @Override
     public void manageTrainingSession(TrainingSessionDTO dto, String transactionId) {
+
+
         if (!"ADD".equalsIgnoreCase(dto.getActionType()) && !"DELETE".equalsIgnoreCase(dto.getActionType())) {
             throw new IllegalArgumentException("Invalid action type: " + dto.getActionType());
         }
@@ -70,4 +77,11 @@ public class TrainerSummaryServiceImpl implements TrainerSummaryService {
             log.info("Transaction ID: {} - Updated training summary for trainer: {}", transactionId, dto.getTrainerUsername());
         }
     }
+
+
+    @Override
+    public List<TrainerSummary> getTrainingSessions() {
+        return repository.findAll();
+    }
+
 }
