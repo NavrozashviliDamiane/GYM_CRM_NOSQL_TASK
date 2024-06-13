@@ -2,13 +2,14 @@ spring:
   application:
     name: TRAINER-WORKLOAD-SERVICE
 
-  datasource:
-    url: jdbc:h2:mem:mydb
-    username: sa
-    password: password
-    driverClassName: org.h2.Driver
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: trainersummary
+
+
 
   cloud:
     config:

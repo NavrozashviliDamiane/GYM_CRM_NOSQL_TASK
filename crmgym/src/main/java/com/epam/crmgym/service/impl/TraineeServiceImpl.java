@@ -1,6 +1,6 @@
 package com.epam.crmgym.service.impl;
 
-import com.epam.crmgym.config.activemq.MessageProducer;
+import com.epam.crmgym.messaging.activemq.MessageProducer;
 import com.epam.crmgym.dto.client.TrainingSessionDTO;
 import com.epam.crmgym.dto.trainee.TraineeProfileDTO;
 import com.epam.crmgym.dto.trainer.TrainerDTO;
