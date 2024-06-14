@@ -9,6 +9,8 @@ import org.springframework.jms.config.DefaultJmsListenerContainerFactory;
 import org.springframework.jms.config.JmsListenerContainerFactory;
 import org.springframework.jms.connection.CachingConnectionFactory;
 import org.springframework.jms.core.JmsTemplate;
+import org.springframework.jms.support.converter.MessageConverter;
+import org.springframework.jms.support.converter.SimpleMessageConverter;
 
 @Configuration
 @EnableJms
@@ -54,5 +56,10 @@ public class JmsConfig {
     JmsTemplate jmsQueueTemplate(ConnectionFactory connectionFactory) {
         JmsTemplate template = new JmsTemplate(connectionFactory);
         return template;
+    }
+
+    @Bean
+    public MessageConverter messageConverter() {
+        return new SimpleMessageConverter();
     }
 }

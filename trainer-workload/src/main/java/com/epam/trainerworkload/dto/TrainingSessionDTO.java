@@ -37,4 +37,7 @@ public class TrainingSessionDTO {
     @NotNull(message = "Action type is required")
     @Pattern(regexp = "ADD|DELETE", message = "Action type must be either 'ADD' or 'DELETE'")
     private String actionType;
+
+    public void setIsActive(boolean b) {
+    }
 }
