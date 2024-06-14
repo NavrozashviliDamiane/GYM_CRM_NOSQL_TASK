@@ -52,7 +52,7 @@ public class BlockLoginIpHelper {
     public String extractTokenFromRequest(HttpServletRequest request) {
         String authHeader = request.getHeader("Authorization");
         if (authHeader != null && authHeader.startsWith("Bearer ")) {
-            return authHeader.substring(7); // Remove "Bearer " prefix from token
+            return authHeader.substring(7);
         }
         return null;
     }

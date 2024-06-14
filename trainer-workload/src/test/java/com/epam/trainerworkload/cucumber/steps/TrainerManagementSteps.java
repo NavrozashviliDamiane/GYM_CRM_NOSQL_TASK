@@ -28,7 +28,7 @@ public class TrainerManagementSteps {
     private final TrainerSummaryRepository repository = Mockito.mock(TrainerSummaryRepository.class);
     private final TrainerSummaryServiceImpl trainerSummaryService = new TrainerSummaryServiceImpl(repository);
 
-    private String transactionId = "12345"; // Mock transaction ID for testing
+    private String transactionId = "12345";
     private TrainingSessionDTO trainingSessionDTO;
     private List<TrainerSummary> trainerSummaries = new ArrayList<>();
 
@@ -116,5 +116,4 @@ public class TrainerManagementSteps {
         }
         assertTrue(exceptionThrown);
     }
-
 }

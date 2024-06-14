@@ -58,7 +58,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
@@ -86,9 +85,6 @@
         </dependency>
 
 
-
-
-
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
@@ -111,8 +107,6 @@
         </dependency>
 
 
-
-        <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-activemq -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-activemq</artifactId>
@@ -152,6 +146,26 @@
         </dependency>
 
 
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-junit</artifactId>
+            <version>7.18.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-java</artifactId>
+            <version>7.18.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.cucumber</groupId>
+            <artifactId>cucumber-spring</artifactId>
+            <version>7.18.0</version>
+        </dependency>
+
+
 
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -175,8 +189,6 @@
                     </excludes>
                 </configuration>
             </plugin>
-
-
 
         </plugins>
     </build>

@@ -28,4 +28,6 @@ public class AppConfig {
     public Map<String, Long> blockedIPs() {
         return new ConcurrentHashMap<>();
     }
+
+
 }

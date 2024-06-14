@@ -49,8 +49,6 @@ Ntrainer-workload/src/main/java/com/epam/trainerworkload/config/JwtService.java
 dtrainer-workload/src/test/java/com/epam/trainerworkload/cucumber/steps/InvalidJwtTokenException.java,2\d\2d1503621db5610e9c62c40c385eebc7211dd9ad
 é
 ^trainer-workload/src/test/java/com/epam/trainerworkload/cucumber/steps/ComponentTestSteps.java,1\9\191bdf2c0c52ba69743dd4b5e1978d309ac2d79c
-ê
-`trainer-workload/src/test/java/com/epam/trainerworkload/cucumber/steps/IntegrationTestSteps.java,5\a\5a6f1e59cc0263d965af855c3eddb86eb078475f
 Ü
 Vtrainer-workload/src/main/java/com/epam/trainerworkload/messaging/MessageConsumer.java,d\9\d9ab332abb3f3976d79bdd545eb0d035203c3345
 
@@ -61,3 +59,7 @@ Strainer-workload/src/main/java/com/epam/trainerworkload/actions/TrainingAction.
 Ntrainer-workload/src/main/java/com/epam/trainerworkload/actions/AddAction.java,b\3\b387f9129e5e45310c69618d08766992c3ed482d
 Å
 Qtrainer-workload/src/main/java/com/epam/trainerworkload/actions/DeleteAction.java,8\0\8070a5b679e4c59c3e7c0f919a06056fb13eab65
+í
+btrainer-workload/src/test/java/com/epam/trainerworkload/cucumber/steps/TrainerManagementSteps.java,3\6\36d7fa1e8733e006470f9abb8964a98a923294d6
+å
+\trainer-workload/src/test/java/com/epam/trainerworkload/TrainerWorkloadApplicationTests.java,b\f\bf79172cee6fc1f537f97d0cfaf531b81b25e6f9

@@ -9,5 +9,4 @@ class TrainerWorkloadApplicationTests {
     @Test
     void contextLoads() {
     }
-
 }
